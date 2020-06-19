@@ -143,7 +143,7 @@ function finalWin() {
 function finalTie() {
     showDiv.innerHTML = 'End of the game, you have tied.';
     showDiv.style.display = 'block';
-    showDiv.style.backgroundColor = rgb(21, 174, 230);
+    showDiv.style.backgroundColor = 'rgb(21, 174, 230)';
 }
 
 function fullColumn(indexCol) {
