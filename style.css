@@ -1,19 +1,29 @@
 body {
+    display: grid;
+    grid-template-areas: 
+    'head head head'
+    'hid hid hid'
+    'turn panel buttons'
+    'foot foot foot';
+    justify-items: center;
     font-family: sans-serif;
     background-color: rgb(220, 231, 235);
 }
 
-h2 {
-    margin: 4px;
-    text-align: center;
+.title {
+    grid-area: head;
+    align-self: center;
+    margin-top: 0;
 }
 
-#turn {
-    position: absolute;
-    left: 50px;
+.turn {
+    grid-area: turn;
 }
-
+.title-color {
+    margin-top: 0;
+}
 #colTurn {
+    margin: auto;
     background-color: red;
     border: 1px solid  rgb(10, 94, 124);
     border-radius: 100%;
@@ -22,7 +32,7 @@ h2 {
 }
 
 .panel {
-    margin: auto;
+    grid-area: panel;
     display: grid;
     background-color: rgb(21, 174, 230);
     border: 2px solid  rgb(10, 94, 124);
@@ -35,8 +45,9 @@ h2 {
 }
 
 .hidden {
-    margin: auto;
+    grid-area: hid;
     display: none;
+    margin-bottom: 5px;
     width: 500px;
     height: 30px;
     padding-top: 8px;
@@ -57,9 +68,7 @@ h2 {
 }
 
 .buttons {
-    position: absolute;
-    right: 50px;
-    top: 100px;
+    grid-area: buttons;
 }
 
 button {
@@ -78,8 +87,10 @@ button:hover {
 }
 
 footer {
-
-    margin-right: 40px;
-    text-align: end;
+    grid-area: foot;
+    justify-self: end;
     font-style: italic;
+}
+.sign {
+    margin-right: 40px;
 }
