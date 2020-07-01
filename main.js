@@ -109,7 +109,7 @@ function checkColumn(currentColor) {
 function checkDiagonal(currentColor) {
     var downRight = false;
     var downLeft = false;
-
+    //diagonal down right
     for (var row = 0; row < 3; row++) {
         for (var col = 0; col < 4; col++) {
             if (game[row][col].color === currentColor && game[row+1][col+1].color === currentColor &&
@@ -121,6 +121,7 @@ function checkDiagonal(currentColor) {
             }
         }
     }
+    //diagonal down left
     for (var row = 3; row < game.length; row++) {
         for (var col = 0; col < 4; col++) {
             if (game[row][col].color === currentColor && game[row-1][col+1].color === currentColor &&
